@@ -23,7 +23,23 @@ ConstructorInitializerAllOnOneLineOrOnePerLine: 'true'
 Cpp11BracedListStyle: 'true'
 DerivePointerAlignment: 'false'
 FixNamespaceComments: 'true'
-IncludeBlocks: Preserve
+IncludeBlocks: Regroup
+IncludeCategories:
+- Regex: '^[<"][A-Z][^/]*[>"]'
+  Priority: 10
+  CaseSensitive: true
+- Regex: '^[<"](benchmark|test|example)/.*[>"]'
+  Priority: 20
+  CaseSensitive: true
+- Regex: '^[<"]vdg/.*[>"]'
+  Priority: 30
+  CaseSensitive: true
+- Regex: '^<[^A-Z].*\/.*>'
+  Priority: 40
+  CaseSensitive: true
+- Regex: '^<[^A-Z].*>'
+  Priority: 50
+  CaseSensitive: true
 IndentCaseLabels: 'true'
 IndentPPDirectives: None
 IndentWidth: '4'
@@ -52,5 +68,5 @@ SpacesInCStyleCastParentheses: 'false'
 SpacesInContainerLiterals: 'false'
 SpacesInParentheses: 'false'
 SpacesInSquareBrackets: 'false'
-Standard: Cpp20
+Standard: Latest
 UseTab: Never
