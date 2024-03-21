@@ -1,3 +1,4 @@
+#include <vdg/DistanceFunction.h>
 #include <vdg/DistanceFunction/EuclideanDistance.h>
 #include <vdg/Point.h>
 
@@ -6,6 +7,10 @@
 #include <cmath>
 
 namespace vdg::test {
+
+static_assert(DistanceFunction<EuclideanDistance<Point2D>, Point2D>);
+static_assert(DistanceFunction<EuclideanDistance<Point3D>, Point3D>);
+static_assert(DistanceFunction<EuclideanDistance<PointXD>, PointXD>);
 
 TEST(EuclideanDistanceTest, Point2DTest) {
     const EuclideanDistance<Point2D> distance;

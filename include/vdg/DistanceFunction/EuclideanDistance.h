@@ -1,9 +1,6 @@
 #ifndef VDG_DISTANCEFUNCTION_EUCLIDEANDISTANCE_H
 #define VDG_DISTANCEFUNCTION_EUCLIDEANDISTANCE_H
 
-#include <vdg/DistanceFunction.h>
-#include <vdg/Point.h>
-
 #include <cassert>
 #include <cmath>
 
@@ -22,10 +19,6 @@ class EuclideanDistance {
         return std::sqrt(sum);
     }
 };
-
-static_assert(DistanceFunction<EuclideanDistance<Point2D>, Point2D>);
-static_assert(DistanceFunction<EuclideanDistance<Point3D>, Point3D>);
-static_assert(DistanceFunction<EuclideanDistance<PointXD>, PointXD>);
 
 }  // namespace vdg
 
