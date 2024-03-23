@@ -8,12 +8,12 @@
 
 namespace vdg::test {
 
-static_assert(DistanceFunction<EuclideanDistance<Point2D>, Point2D>);
-static_assert(DistanceFunction<EuclideanDistance<Point3D>, Point3D>);
-static_assert(DistanceFunction<EuclideanDistance<PointXD>, PointXD>);
+static_assert(DistanceFunction<EuclideanDistance, Point2D>);
+static_assert(DistanceFunction<EuclideanDistance, Point3D>);
+static_assert(DistanceFunction<EuclideanDistance, PointXD>);
 
 TEST(EuclideanDistanceTest, Point2DTest) {
-    const EuclideanDistance<Point2D> distance;
+    const EuclideanDistance distance;
     const Point2D lhs{1, 2};
     const Point2D rhs{3, 4};
     const double expected = std::sqrt(8);
@@ -22,7 +22,7 @@ TEST(EuclideanDistanceTest, Point2DTest) {
 }
 
 TEST(EuclideanDistanceTest, Point3DTest) {
-    const EuclideanDistance<Point3D> distance;
+    const EuclideanDistance distance;
     const Point3D lhs{1, 2, 3};
     const Point3D rhs{4, 5, 6};
     const double expected = std::sqrt(27);
@@ -31,7 +31,7 @@ TEST(EuclideanDistanceTest, Point3DTest) {
 }
 
 TEST(EuclideanDistanceTest, PointXDTest) {
-    const EuclideanDistance<PointXD> distance;
+    const EuclideanDistance distance;
     const PointXD lhs{1, 2, 3, 4};
     const PointXD rhs{5, 6, 7, 8};
     const double expected = std::sqrt(64);

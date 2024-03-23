@@ -6,9 +6,9 @@
 
 namespace vdg {
 
-template<typename TPoint>
 class EuclideanDistance {
   public:
+    template<typename TPoint>
     [[nodiscard]] double operator()(const TPoint& lhs,
                                     const TPoint& rhs) const {
         assert(lhs.size() == rhs.size());
