@@ -10,9 +10,7 @@ namespace vdg {
 template<typename TSite, typename TPoint, typename TFunction>
 concept Site = DistanceFunction<TFunction, TPoint> &&
                requires(TSite site, TPoint point, TFunction func) {
-                   {
-                       site.distance(point, func)
-                   } -> std::convertible_to<double>;
+                   { site.distance(point, func) } -> std::same_as<double>;
                };
 
 }  // namespace vdg
