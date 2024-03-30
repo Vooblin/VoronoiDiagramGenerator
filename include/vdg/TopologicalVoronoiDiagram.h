@@ -15,7 +15,8 @@ concept TopologicalVoronoiDiagram =
     requires(TDiagram diagram,
              TPoint point,
              TDiagram::ElementId elem_id,
-             std::vector<typename TDiagram::ElementId> elem_ids) {
+             std::vector<typename TDiagram::ElementId> elem_ids,
+             std::size_t dim) {
         {
             diagram.addVertex(point)
         } -> std::same_as<typename TDiagram::ElementId>;
@@ -25,6 +26,23 @@ concept TopologicalVoronoiDiagram =
         {
             diagram.addCell(elem_ids)
         } -> std::same_as<typename TDiagram::ElementId>;
+        { diagram.vertexPoint(elem_id) } -> std::same_as<const TPoint&>;
+        {
+            diagram.edgeVertices(elem_id)
+        } -> std::same_as<std::pair<typename TDiagram::ElementId,
+                                    typename TDiagram::ElementId>>;
+        {
+            diagram.cellFaces(elem_id, dim)
+        } -> std::same_as<std::vector<typename TDiagram::ElementId>>;
+        {
+            diagram.vertices()
+        } -> std::same_as<std::vector<typename TDiagram::ElementId>>;
+        {
+            diagram.edges()
+        } -> std::same_as<std::vector<typename TDiagram::ElementId>>;
+        {
+            diagram.cells(dim)
+        } -> std::same_as<std::vector<typename TDiagram::ElementId>>;
     };
 
 }  // namespace vdg
