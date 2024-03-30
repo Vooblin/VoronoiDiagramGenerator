@@ -17,7 +17,7 @@ class DcelVoronoiDiagram {
     };
 
     struct Vertex {
-        Point2D crd;
+        Point2D crd{};
         std::optional<std::size_t> incident_edge_idx;
     };
 
