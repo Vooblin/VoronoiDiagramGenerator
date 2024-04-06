@@ -1,6 +1,6 @@
 #include <vdg/Point.h>
-#include <vdg/Site.h>
 #include <vdg/Site/PointSite.h>
+#include <vdg/Site/Site.h>
 
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>

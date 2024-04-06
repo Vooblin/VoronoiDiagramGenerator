@@ -1,7 +1,7 @@
-#ifndef VDG_SITE_H
-#define VDG_SITE_H
+#ifndef VDG_SITE_SITE_H
+#define VDG_SITE_SITE_H
 
-#include <vdg/DistanceFunction.h>
+#include <vdg/DistanceFunction/DistanceFunction.h>
 
 #include <concepts>
 
@@ -15,4 +15,4 @@ concept Site = DistanceFunction<TFunction, TPoint> &&
 
 }  // namespace vdg
 
-#endif  // VDG_SITE_H
+#endif  // VDG_SITE_SITE_H

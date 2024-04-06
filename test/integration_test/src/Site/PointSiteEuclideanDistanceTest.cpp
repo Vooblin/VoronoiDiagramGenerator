@@ -1,7 +1,7 @@
 #include <vdg/DistanceFunction/EuclideanDistance.h>
 #include <vdg/Point.h>
-#include <vdg/Site.h>
 #include <vdg/Site/PointSite.h>
+#include <vdg/Site/Site.h>
 
 #include <gtest/gtest.h>
 

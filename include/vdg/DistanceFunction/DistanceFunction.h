@@ -1,5 +1,5 @@
-#ifndef VDG_DISTANCEFUNCTION_H
-#define VDG_DISTANCEFUNCTION_H
+#ifndef VDG_DISTANCEFUNCTION_DISTANCEFUNCTION_H
+#define VDG_DISTANCEFUNCTION_DISTANCEFUNCTION_H
 
 #include <concepts>
 
@@ -12,4 +12,4 @@ concept DistanceFunction = requires(TFunction func, TPoint lhs, TPoint rhs) {
 
 }  // namespace vdg
 
-#endif  // VDG_DISTANCEFUNCTION_H
+#endif  // VDG_DISTANCEFUNCTION_DISTANCEFUNCTION_H

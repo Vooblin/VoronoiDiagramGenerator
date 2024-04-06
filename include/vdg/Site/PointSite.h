@@ -1,7 +1,7 @@
 #ifndef VDG_SITE_POINTSITE_H
 #define VDG_SITE_POINTSITE_H
 
-#include <vdg/DistanceFunction.h>
+#include <vdg/DistanceFunction/DistanceFunction.h>
 
 #include <utility>
 

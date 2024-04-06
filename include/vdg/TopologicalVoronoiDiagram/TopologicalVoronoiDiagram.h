@@ -1,5 +1,5 @@
-#ifndef VDG_TOPOLOGICALVORONOIDIAGRAM_H
-#define VDG_TOPOLOGICALVORONOIDIAGRAM_H
+#ifndef VDG_TOPOLOGICALVORONOIDIAGRAM_TOPOLOGICALVORONOIDIAGRAM_H
+#define VDG_TOPOLOGICALVORONOIDIAGRAM_TOPOLOGICALVORONOIDIAGRAM_H
 
 #include <vdg/HasElementId.h>
 
@@ -14,7 +14,7 @@ concept TopologicalVoronoiDiagram =
     HasElementId<TDiagram> && std::is_default_constructible_v<TDiagram> &&
     requires(TDiagram diagram,
              TPoint point,
-             TDiagram::ElementId elem_id,
+             typename TDiagram::ElementId elem_id,
              std::vector<typename TDiagram::ElementId> elem_ids,
              std::size_t dim) {
         {
@@ -47,4 +47,4 @@ concept TopologicalVoronoiDiagram =
 
 }  // namespace vdg
 
-#endif  // VDG_TOPOLOGICALVORONOIDIAGRAM_H
+#endif  // VDG_TOPOLOGICALVORONOIDIAGRAM_TOPOLOGICALVORONOIDIAGRAM_H

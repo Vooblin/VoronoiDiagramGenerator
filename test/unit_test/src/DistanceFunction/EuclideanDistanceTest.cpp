@@ -1,4 +1,4 @@
-#include <vdg/DistanceFunction.h>
+#include <vdg/DistanceFunction/DistanceFunction.h>
 #include <vdg/DistanceFunction/EuclideanDistance.h>
 #include <vdg/Point.h>
 
