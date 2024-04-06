@@ -6,7 +6,10 @@
 namespace vdg {
 
 template<typename TObject>
-concept HasElementId = requires { typename TObject::ElementId; };
+concept HasElementId = requires {
+    typename TObject::ElementId;
+    requires std::equality_comparable<typename TObject::ElementId>;
+};
 
 }  // namespace vdg
 

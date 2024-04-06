@@ -1,5 +1,5 @@
 add_executable(vdg_unit_tests DistanceFunction/EuclideanDistanceTest.cpp
-                              Site/PointSiteTest.cpp TopologicalVoronoiDiagram/TopologicalVoronoiDiagram2DTest.cpp)
+                              Site/PointSiteTest.cpp TopologicalVoronoiDiagramTest.cpp)
 
 target_include_directories(
   vdg_unit_tests PUBLIC ${VDG_TEST_INCLUDE_DIR}
